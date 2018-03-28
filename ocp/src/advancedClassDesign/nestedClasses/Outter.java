@@ -31,47 +31,72 @@ package advancedClassDesign.nestedClasses;
  *
  */
 public class Outter {
-    
-    private String instanceMemberVariable;
-    private static String staticMemberVariable;
 
-    private static class MemberStaticInner {
+    public PrivateMemberInner privateInstanceMemberVariable = new PrivateMemberInner();
+    public PublicMemberInner publicInstanceMemberVariable = new PublicMemberInner();
+
+    public static PrivateMemberStaticInner privateStaticMemberVariable = new PrivateMemberStaticInner();
+    public static PublicMemberStaticInner publicStaticMemberVariable = new PublicMemberStaticInner();
+
+    private static class PrivateMemberStaticInner {
 
         private String privateMSI;
+
         private static String privateStaticMSI;
-
         public String publicMSI;
-        public static String publicStaticMSI;
 
-        private MemberStaticInner(){}
-        public MemberStaticInner(String s){}
+        public static String publicStaticMSI;
+        private PrivateMemberStaticInner(){}
+
+        public PrivateMemberStaticInner(String s){}
+
+    }
+    public static class PublicMemberStaticInner {
+        private String privateMSI;
+
+        private static String privateStaticMSI;
+        public String publicMSI;
+
+        public static String publicStaticMSI;
+        private PublicMemberStaticInner(){}
+
+        public PublicMemberStaticInner(String s){}
 
     }
 
-    private class MemberInner {
+    private class PrivateMemberInner {
 
         private String privateMI;
+
         private /*static*/ String privateStaticMI; /*Inner classes cannot have static declarations.*/
-
         public String publicMI;
-        public /*static*/ String publicStaticMI; /*Inner classes cannot have static declarations.*/
 
-        private MemberInner(){}
-        public MemberInner(String s){}
+        public /*static*/ String publicStaticMI; /*Inner classes cannot have static declarations.*/
+        private PrivateMemberInner(){}
+
+        public PrivateMemberInner(String s){}
 
     }
+    public class PublicMemberInner {
+        private String privateMI;
+
+        private /*static*/ String privateStaticMI; /*Inner classes cannot have static declarations.*/
+        public String publicMI;
+
+        public /*static*/ String publicStaticMI; /*Inner classes cannot have static declarations.*/
+        private PublicMemberInner(){}
+
+        public PublicMemberInner(String s){}
+
+
+    }
+
 
     public static void main(String... args) {
 
-        assert          new Outter().new MemberInner().privateMI            == null;
-        assert          new Outter().new MemberInner().publicMI             == null;
 
-        assert          new Outter.MemberStaticInner().privateMSI           == null; //can access private members of private static member class
-        assert          new MemberStaticInner().privateMSI                  == null; /* is the same as the upper line */
 
-        assert          new Outter.MemberStaticInner("")                 == null;
-        assert          new MemberStaticInner().privateMSI                  == null;
+
 
     }
-
 }
