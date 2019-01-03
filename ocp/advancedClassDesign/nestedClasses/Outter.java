@@ -32,8 +32,8 @@ package advancedClassDesign.nestedClasses;
  */
 public class Outter {
 
-    public PrivateMemberInner privateInstanceMemberVariable = new PrivateMemberInner();
-    public PublicMemberInner publicInstanceMemberVariable = new PublicMemberInner();
+    public PrivateMemberInnerClass privateInstanceMemberVariable = new PrivateMemberInnerClass();
+    public PublicMemberInnerClass publicInstanceMemberVariable = new PublicMemberInnerClass();
 
     public static PrivateMemberStaticInner privateStaticMemberVariable = new PrivateMemberStaticInner();
     public static PublicMemberStaticInner publicStaticMemberVariable = new PublicMemberStaticInner();
@@ -64,7 +64,7 @@ public class Outter {
 
     }
 
-    private class PrivateMemberInner {
+    private class PrivateMemberInnerClass {
 
         private String privateMI;
 
@@ -72,21 +72,22 @@ public class Outter {
         public String publicMI;
 
         public /*static*/ String publicStaticMI; /*Inner classes cannot have static declarations.*/
-        private PrivateMemberInner(){}
+        private PrivateMemberInnerClass(){}
 
-        public PrivateMemberInner(String s){}
+        public PrivateMemberInnerClass(String s){}
 
     }
-    public class PublicMemberInner {
+
+    public class PublicMemberInnerClass {
         private String privateMI;
 
         private /*static*/ String privateStaticMI; /*Inner classes cannot have static declarations.*/
         public String publicMI;
 
         public /*static*/ String publicStaticMI; /*Inner classes cannot have static declarations.*/
-        private PublicMemberInner(){}
+        private PublicMemberInnerClass(){}
 
-        public PublicMemberInner(String s){}
+        public PublicMemberInnerClass(String s){}
 
 
     }
