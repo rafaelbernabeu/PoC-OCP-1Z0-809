@@ -1,4 +1,4 @@
-package advancedClassDesign.nestedClasses;
+package ocp.advancedClassDesign.nestedClasses;
 
 /**
  * A class designed to check witch statements are valid.

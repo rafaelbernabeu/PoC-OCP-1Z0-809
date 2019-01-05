@@ -1,4 +1,4 @@
-package advancedClassDesign.nestedClasses;
+package ocp.advancedClassDesign.nestedClasses;
 
 /**
  * @author Rafael Bernabeu

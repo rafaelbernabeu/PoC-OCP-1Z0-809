@@ -1,4 +1,4 @@
-package concurrency;
+package ocp.concurrency;
 
 import java.util.List;
 import java.util.Set;
@@ -13,7 +13,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- *
+ *  Skiplists
  *
  */
 public class ConcurrentCollections {

@@ -1,4 +1,4 @@
-package concurrency;
+package ocp.concurrency;
 
 import java.util.Collections;
 import java.util.List;

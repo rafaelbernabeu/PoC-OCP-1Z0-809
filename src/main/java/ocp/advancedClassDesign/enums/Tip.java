@@ -1,4 +1,4 @@
-package advancedClassDesign.enums;
+package ocp.advancedClassDesign.enums;
 
 /**
  * @author Rafael Bernabeu
